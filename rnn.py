@@ -9,10 +9,10 @@ class RNN:
         self.lr = learning_rate
 
         self.Wxh = np.random.randn(hidden_size, input_size) * 0.01
-        self.Whh = np.random.randn(hidden_size, hidden_size)
-        self.Why = np.random.randn(output_size, hidden_size)
-        self.bh = np.zeros((hidden_size, 1))
-        self.by = np.zeros((output_size, 1))
+        self.Whh = np.random.randn(hidden_size, hidden_size) * 0.01 
+        self.Why = np.random.randn(output_size, hidden_size) * 0.01 
+        self.bh = np.zeros((hidden_size, 1)) * 0.01
+        self.by = np.zeros((output_size, 1)) * 0.01
 
     def tanh(self, x):
         return np.tanh(x)
